@@ -1,2 +1,2 @@
 # vcsh_bash_completion
-command completion for vcsh
+Place vcsh file in /etc/bash_completion.d/
