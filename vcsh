@@ -22,7 +22,7 @@ _vcsh()
 		;;      
     esac
    
-   COMPREPLY=($(compgen -W "${opts}" -- ${cur}) )
+   COMPREPLY=($(compgen -W "${opts} $(vcsh list)" -- ${cur}) )
    return 0
             
 }
