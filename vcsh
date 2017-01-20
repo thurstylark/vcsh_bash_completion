@@ -17,8 +17,7 @@ _vcsh()
     case "${prev}" in
 
     delete|enter|init|list-tracked|list-untracked|rename|run|status|upgrade)
-	    local repos=$(for x in `ls ~/.config/vcsh/repo.d/`; do echo ${x%".git"} ; done )
-	    COMPREPLY=( $(compgen -W "${repos}" -- ${cur}) )
+	    COMPREPLY=( $(compgen -W "$(vcsh list)" -- ${cur}) )
 		return 0
 		;;      
     esac
